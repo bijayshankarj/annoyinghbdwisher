@@ -116,8 +116,10 @@ void finalwait(int age, int gender)
 }
 
 // Function to return Gender by Integer Input
-int gendr(int g)
-{
+int gendr()
+{   
+  int g;
+  scanf("%d", &g);
   if (g == 1 || g == 2 || g == 3)
   {
     return g;
@@ -129,8 +131,9 @@ int gendr(int g)
     printf("The Entered value does not match any choices\n");
     Sleep(1000);
     ask();
-    cin >> g;
-    gendr(g);
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+    gendr();
   }
 }
 
