@@ -115,7 +115,7 @@ void finalwait(int age, int gender)
   system("cls");
 }
 
-// Function to return Gender by Integer Input
+// Function to return Gender by Integer value
 int gendr()
 {   
   int g;
@@ -137,7 +137,7 @@ int gendr()
   }
 }
 
-// Taking Day
+// Taking Day Input
 int takingday(int *counter)
 {
   int dobb;
@@ -227,7 +227,7 @@ int takingday(int *counter)
   }
 }
 
-// Taking Month
+// Taking Month Input
 int takingmonth(int *counter)
 {
   int dob2;
@@ -478,7 +478,6 @@ unsigned int __stdcall countdowntimer(void *params)
       cout.flush();
     }
 
-    // Wait for one second using Sleep (Windows-specific)
     Sleep(1000);
   }
   system("cls");
@@ -529,10 +528,9 @@ unsigned int __stdcall countdowntimer(void *params)
 
   cout << "Playing Happy Birthday\n";
 
-  // Assuming sample02.mp3 is in the same directory as the executable
+  // When HBD.wav is in the same directory as the executable
   PlaySound(TEXT("HBD.wav"), NULL, SND_FILENAME | SND_SYNC);
 
-  // Sleep for a while to allow the sound to play (adjust as needed)
   Sleep(800);
 
   return 0;
