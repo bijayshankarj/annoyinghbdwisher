@@ -564,8 +564,7 @@ int main()
   dob[2] = takingyear(counter, year);
   system("cls");
   ask();
-  cin >> gender;
-  int ge = gendr(gender);
+  int ge = gendr();
 
   age = year - dob[2];
   printf("Ok...\n");
@@ -595,7 +594,7 @@ int main()
     wait(3);
     system("cls");
   }
-  else if (target_month == month && target_day <= day)
+  else if (target_month == month && target_day < day)
   {
     target_year++;
     printf("Looks like it's time to your Birthday");
@@ -612,7 +611,10 @@ int main()
   finalwait(age, ge);
   // system("cls");
   system("cls");
-  printf("Let's begin the count down!\n");
+  if(target_day!=day){
+    printf("Let's begin the count down!\n");
+  }
+  
   wait(2);
   system("cls");
   // Prepare parameters for the thread function
